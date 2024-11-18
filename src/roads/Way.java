@@ -1,3 +1,3 @@
 package roads;
 
-public record Way(Plases endCity, Plases startSity) { }
+public record Way(Places startSity, Places endCity) { }

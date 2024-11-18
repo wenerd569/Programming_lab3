@@ -1,19 +1,19 @@
 package table;
 import exeption.ObjectNotFoundExeption;
-import roads.Plases;
+import roads.Places;
 import roads.Way;
 
 public class MapSign extends Sign implements IMap{
     protected Way way;
-    protected final Plases[] plases;
+    protected final Places[] places;
 
-    public MapSign(Plases ... places){
-        this.plases = places;
+    public MapSign(Places ... places){
+        this.places = places;
     }
 
     @Override
     public Way getWay() throws ObjectNotFoundExeption{
-        if (way == null     ){
+        if (way == null){
             throw new ObjectNotFoundExeption();
         }
         return way;
@@ -21,7 +21,7 @@ public class MapSign extends Sign implements IMap{
 
     @Override
     public void drawWay(Way way) throws ObjectNotFoundExeption{
-        if (searthPlace(way.startSity()) && searthPlace(way.endCity())){
+        if (searchPlace(way.startSity()) && searchPlace(way.endCity())){
             this.way = way;
         }
         else{
@@ -30,9 +30,9 @@ public class MapSign extends Sign implements IMap{
     }
 
     @Override
-    public boolean searthPlace(Plases plase) {
-        for (int i = 0; i < plases.length; i++){
-            if (plase == plases[i]){
+    public boolean searchPlace(Places place) {
+        for (int i = 0; i < places.length; i++){
+            if (place == places[i]){
                 return true;
             }
         }
