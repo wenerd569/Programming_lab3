@@ -1,5 +1,5 @@
 
-package table;
+package sign;
 
 import exeption.ObjectNotFoundExeption;
 import roads.Places;

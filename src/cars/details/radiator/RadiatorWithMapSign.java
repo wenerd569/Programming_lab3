@@ -1,6 +1,7 @@
-
+/*
 package cars.details.radiator;
 
+import cars.IMapHolder;
 import table.IMap;
 
 public class RadiatorWithMapSign extends Radiator implements IMapHolder{
@@ -11,7 +12,7 @@ public class RadiatorWithMapSign extends Radiator implements IMapHolder{
     }
 
     @Override
-    public IMap getMap() {
+    public IMap takeMap() {
         return map;
     }
 
@@ -19,4 +20,4 @@ public class RadiatorWithMapSign extends Radiator implements IMapHolder{
     public void setMap(IMap map) {
         this.map = map; 
     }
-}
+} */

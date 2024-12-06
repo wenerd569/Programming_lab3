@@ -1,4 +1,4 @@
-package table;
+package sign;
 
 public class Sign {
     @Override

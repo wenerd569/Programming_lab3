@@ -7,7 +7,6 @@ public class Door{
         CLOSE,
     }
     protected DoorState state;
-    
     public void open(){
         state = DoorState.OPEN;
     }
@@ -15,12 +14,8 @@ public class Door{
         state = DoorState.CLOSE;
     }
     public boolean isOpen(){
-        if (state == DoorState.OPEN){
-            return true;
-        }
-        return false;
+        return (state == DoorState.OPEN);
     }
-    
     @Override
     public String toString(){
         return "дверь";

@@ -1,6 +1,5 @@
 package cars;
 
-import cars.details.radiator.IMapHolder;
 import people.Human;
 import exeption.AutopilotExeption;
 

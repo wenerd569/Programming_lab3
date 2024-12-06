@@ -1,27 +1,38 @@
 package people;
 
 
-import cars.Car;
+import java.util.Vector;
 
-public abstract class Human{
+import cars.Car;
+import cars.ICar;
+import exeption.StateExeption;
+import other.RealObject;
+import other.Vector2;
+
+public abstract class Human extends RealObject{
 
     public abstract void waveHand();
 
-    public void walk(Object target){
+    public Human(Vector2 coord){
+        super(coord);
+    }
+
+    public void walk(RealObject target){
+        setCoord(target.getCoord());
         System.out.printf("%1$s подошёл к %2$s\n", toString(), target.toString());
     } 
     public void turnBack(){
         System.out.printf("%1$s обернулся назад\n", toString());
     }
 
-    public void openCarDoor(Car car){
+    public void openCarDoor(ICar car) throws StateExeption{
         car.openDoor(this);
     }
-    public void closeCarDoor(Car car){
+    public void closeCarDoor(ICar car) throws StateExeption{
         car.closeDoor(this);
     }
 
-    public void sitInCar(Car car){
+    public void sitInCar(ICar car) throws StateExeption{
         car.sit(this);
     }
 }

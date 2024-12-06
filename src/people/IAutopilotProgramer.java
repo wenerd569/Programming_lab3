@@ -2,9 +2,13 @@ package people;
 
 
 import exeption.ObjectNotFoundExeption;
-import cars.IAutopilot;
+import cars.*;
 import roads.Way;
 
 public interface IAutopilotProgramer {
-    public void drawWay(Way way, IAutopilot car) throws ObjectNotFoundExeption;
+    public void takeMap(IAutopilot target) throws ObjectNotFoundExeption;
+    public void drawWay(Way way) throws ObjectNotFoundExeption;
+    public void putMap(IAutopilot target) throws ObjectNotFoundExeption;
+
+    public AutopilotCar makeCarAutopilot(Car car);
 }
